@@ -67,6 +67,10 @@ bin/pulsar-admin source create \
 ```
 bin/pulsar-admin source status --name cassandra-source-tweet_by_id
 ```
+- you could in addition check CDC operates already by consuming the topic created by the cassandra source connector
+```
+sh -c "bin/pulsar-client consume public/default/data-twitter.tweet_by_id -s tweet-data -n 60 -r 1"
+```
 - in case you want delete the cassandra source connector: bin/pulsar-admin source delete --name cassandra-source-tweet_by_id
 - follow the steps in the section [Start Elasticsearch and Kibana in Docker](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-stack-docker.html#run-docker-secure)
 - INTERACTION with with elasticsearch and kibana only via https
