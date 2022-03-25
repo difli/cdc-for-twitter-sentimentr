@@ -175,7 +175,7 @@ curl -v -k 'https://localhost:9200/tweets/_search' -u elastic:'6-e+Yg9tUJG_BsSh4
 - or better use [kibana](http://localhost:5601/) - Discover and hit refresh from time to time
 ![alt text](/images/discover.png)
 - import via saved objects management the [tweets dashboard](dashboard) into kibana   
-- no you should be able to watch your Tweets dashboard
+- you should be able to watch Tweets statistics in the dashboard now
 ![alt text](/images/elasticsearch.png)
 # Run CDC powered by Astra
 - NO HASSLE with any configuration!
