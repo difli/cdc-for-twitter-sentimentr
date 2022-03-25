@@ -9,7 +9,7 @@ The twitter-sentiment application inserts data into cassandra. CDC ensures that 
 
 The described steps presume you have followed [twitter-sentimentr](https://github.com/difli/twitter-sentimentr) and have now a local installation of apache pulsar, apache cassandra and the twitter-sentimentr demo application up and running.
 
-# Installation
+# Run CDC with a local pulsar and cassandra instance
 - follow the DataStax Change Agent for Apache Cassandra (CDC) [installation guide](https://docs.datastax.com/en/cdc-for-cassandra/cdc-apache-cassandra/1.0.2/index.html)
 - [download](https://downloads.datastax.com/#cassandra-change-agent) the change agent
 - export the JVM_EXTRA_OPT environment variable for apache cassandra
@@ -178,3 +178,17 @@ bin/pulsar-admin topics stats-internal persistent://public/default/data-twitter.
 bin/pulsar-admin topics stats-internal persistent://public/default/event-twitter.tweet_by_id
 bin/pulsar-admin topics list public/default
 ```
+# Run CDC powered by Astra
+- NO HASSLE with any configuration!
+- Just enable CDC on the table you want to stream data from Astra DB to any destination for leveraging your data in realtime.
+![alt text](/images/cdc-enable.png)
+- wait until it is initalized
+![alt text](/images/cdc-initializing.png)
+ - than see your data stream as it gets puplished to the data topic that was automatically created for your
+ ![alt text](/images/cdc-data-topic.png)
+ - let"s create a elastic search sink
+ ![alt text](/images/cdc-elastic-1.png)
+ - you could choose from various connectors (sinks) in order to stream your realtimedate
+ ![alt text](/images/cdc-connectors.png)
+ - elasticsearch sink details
+ ![alt text](/images/cdc-elastic-2.png)
