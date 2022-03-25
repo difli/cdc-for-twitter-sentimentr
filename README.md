@@ -167,7 +167,7 @@ bin/pulsar-admin sink status --name elasticsearch-sink
 ```
 cqlsh:twitter> insert into twitter.tweet_by_id (lang,createdat,id,sentiment,tweet) values ('de','xyz','9',3,'test4');
 ```
-See if you get something in elastic search
+- See if you get something in elastic search
 ```
 curl -v -k 'https://localhost:9200/tweets/_refresh' -u elastic:'6-e+Yg9tUJG_BsSh44R='
 curl -v -k 'https://localhost:9200/tweets/_search' -u elastic:'6-e+Yg9tUJG_BsSh44R='
