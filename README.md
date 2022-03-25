@@ -172,12 +172,11 @@ See if you get something in elastic search
 curl -v -k 'https://localhost:9200/tweets/_refresh' -u elastic:'6-e+Yg9tUJG_BsSh44R='
 curl -v -k 'https://localhost:9200/tweets/_search' -u elastic:'6-e+Yg9tUJG_BsSh44R='
 ```
-Other useful commands:
-```
-bin/pulsar-admin topics stats-internal persistent://public/default/data-twitter.tweet_by_id
-bin/pulsar-admin topics stats-internal persistent://public/default/event-twitter.tweet_by_id
-bin/pulsar-admin topics list public/default
-```
+- or better use [kibana](http://localhost:5601/) - Discover and hit refresh from time to time
+![alt text](/images/discover.png)
+- import via saved objects management the [tweets dashboard](dashboard) into kibana   
+- no you should be able to watch your Tweets dashboard
+![alt text](/images/elasticsearch.png)
 # Run CDC powered by Astra
 - NO HASSLE with any configuration!
 - Just enable CDC on the table you want to stream data from Astra DB to any destination for leveraging your data in realtime.
